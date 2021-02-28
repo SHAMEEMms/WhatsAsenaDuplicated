@@ -11,7 +11,7 @@ const axios = require('axios');
 const Language = require('../language');
 const Lang = Language.getString('ttp');
 
-Asena.addCommand({ pattern: 'ttp ?(.*)', fromMe: true, desc: Lang.TTP_DESC }, (async (message, match) => {
+Asena.addCommand({ pattern: 'ttp ?(.*)', fromMe: false, desc: Lang.TTP_DESC }, (async (message, match) => {
 
     if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -21,7 +21,7 @@ Asena.addCommand({ pattern: 'ttp ?(.*)', fromMe: true, desc: Lang.TTP_DESC }, (a
 
 }));
 
-Asena.addCommand({ pattern: 'attp ?(.*)', fromMe: true, desc: Lang.ATTP_DESC }, (async (message, match) => {
+Asena.addCommand({ pattern: 'attp ?(.*)', fromMe: false, desc: Lang.ATTP_DESC }, (async (message, match) => {
 
     if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
